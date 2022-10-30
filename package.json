@@ -1,12 +1,12 @@
 {
   "name": "@kinopoiskdev/prisma",
-  "version": "1.2.3",
+  "version": "1.2.5",
   "description": "",
   "scripts": {
     "db:generate": "dotenv -- prisma generate",
-    "test": ""
+    "test": "",
+    "postinstall": "tsc && cp src/index.d.ts dist/index.d.ts && npx prisma@4.5.0 generate"
   },
-  "postinstall": "tsc && cp src/index.d.ts dist/index.d.ts && npx prisma@4.5.0 generate",
   "keywords": [],
   "author": "mdwitr0",
   "license": "ISC",
@@ -21,8 +21,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/kinopoiskdev/prisma"
-  },
-  "publishConfig": {
-    "@kinopoiskdev:registry": "https://npm.pkg.github.com"
   }
 }
