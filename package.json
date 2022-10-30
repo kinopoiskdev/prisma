@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "db:generate": "dotenv -- prisma generate"
+    "db:generate": "dotenv -- prisma generate",
+    "test": ""
   },
   "postinstall": "tsc && cp src/index.d.ts dist/index.d.ts && npx prisma@4.5.0 generate",
   "keywords": [],
