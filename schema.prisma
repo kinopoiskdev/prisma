@@ -68,6 +68,9 @@ enum ImageType {
   POSTER
   FRAME
   LOGO
+  STILL
+  SHOOTING
+  SCREENSHOT
 }
 
 // Video enums
