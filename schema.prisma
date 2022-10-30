@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  output   = "../ts-db-client/src"
 }
 
 datasource db {
@@ -343,8 +344,8 @@ model MovieFact {
 
 model Movie {
   // Id properties
-  id                            String                @id @default(auto()) @map("_id") @db.ObjectId
-  kpId                          Int                   @unique
+  id                            String              @id @default(auto()) @map("_id") @db.ObjectId
+  kpId                          Int                 @unique
   externalId                    MovieExternalId
   // String properties
   name                          String?
@@ -377,10 +378,10 @@ model Movie {
   watchability                  MovieWatchability?
   releaseYears                  MovieReleaseYears[]
   // Date proprties
-  createdAt                     DateTime              @default(now())
-  updatedAt                     DateTime              @updatedAt
+  createdAt                     DateTime            @default(now())
+  updatedAt                     DateTime            @updatedAt
   // Relations
-  movieId                       String                @db.ObjectId()
+  movieId                       String              @db.ObjectId()
   images                        Image[]
   videos                        Video[]
   seasons                       Season[]
@@ -388,9 +389,9 @@ model Movie {
   facts                         MovieFact[]
   review                        Review[]
   // Sequels and prequels
-  movieHavingSequelsAndPrequels Movie                 @relation("SequelsAndPrequels", fields: [movieId], references: [id], onUpdate: NoAction)
-  sequelsAndPrequels            Movie[]               @relation("SequelsAndPrequels")
+  movieHavingSequelsAndPrequels Movie               @relation("SequelsAndPrequels", fields: [movieId], references: [id], onUpdate: NoAction)
+  sequelsAndPrequels            Movie[]             @relation("SequelsAndPrequels")
   // Similar movies
-  movieHavingSimilar            Movie                 @relation("SimilarMovies", fields: [movieId], references: [id], onUpdate: NoAction)
-  similarMovies                 Movie[]               @relation("SimilarMovies")
+  movieHavingSimilar            Movie               @relation("SimilarMovies", fields: [movieId], references: [id], onUpdate: NoAction)
+  similarMovies                 Movie[]             @relation("SimilarMovies")
 }
