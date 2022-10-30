@@ -1,15 +1,8 @@
 {
   "name": "@kinopoiskdev/prisma",
-  "version": "1.2.6",
+  "version": "1.0.0",
   "description": "",
-  "scripts": {
-    "db:generate": "dotenv -- prisma generate",
-    "test": "",
-    "postinstall": "tsc && cp src/index.d.ts dist/index.d.ts && npx prisma@4.5.0 generate"
-  },
-  "keywords": [],
-  "author": "mdwitr0",
-  "license": "ISC",
+  "main": "index.ts",
   "dependencies": {
     "@prisma/client": "^4.0.0"
   },
@@ -18,11 +11,19 @@
     "prisma": "^4.5.0",
     "typescript": "^4.8.4"
   },
+  "scripts": {
+    "db:generate": "dotenv -- prisma generate",
+    "test": "",
+    "postinstall": "tsc && cp src/index.d.ts dist/index.d.ts && npm run db:generate"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kinopoiskdev/prisma"
+    "url": "git+https://github.com/kinopoiskdev/prisma.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@kinopoiskdev"
-  }
+  "author": "mdwitr0",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kinopoiskdev/prisma/issues"
+  },
+  "homepage": "https://github.com/kinopoiskdev/prisma#readme"
 }
