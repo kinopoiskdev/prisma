@@ -1,6 +1,6 @@
 {
   "name": "@kinopoiskdev/prisma",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "",
   "scripts": {
     "db:generate": "dotenv -- prisma generate",
