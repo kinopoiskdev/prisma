@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": [
+      "es2021"
+    ],
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "paths": {
+      "*": [
+        "/src/*"
+      ]
+    }
+  }
+}
