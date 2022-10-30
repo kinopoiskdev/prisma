@@ -2,7 +2,7 @@ generator client {
   provider        = "prisma-client-js"
   binaryTargets   = ["native", "linux-musl"]
   previewFeatures = ["interactiveTransactions"]
-  output          = "./src/generated/prisma-client"
+  output          = "../prisma-client"
 }
 
 datasource db {
